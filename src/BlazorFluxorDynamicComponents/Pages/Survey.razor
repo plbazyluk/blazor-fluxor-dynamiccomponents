@@ -1,0 +1,15 @@
+﻿@page "/"
+@inherits Fluxor.Blazor.Web.Components.FluxorComponent
+
+<PageTitle>Survey</PageTitle>
+
+<DynamicComponent Type=@SurveyState.Value.CurrentQuestionType />
+
+<div class="row text-center">
+    <button class="form-control form-control-sm"
+            @onclick=GoToNextQuestion>
+
+        Next question
+
+    </button>
+</div>
